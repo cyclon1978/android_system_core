@@ -54,7 +54,7 @@ void CallStack::log(const char* logtag, android_LogPriority priority, const char
     print(printer);
 }
 
-#ifdef MTK_MT6589
+/*#ifdef MTK_MT6589
 void CallStack::update(int32_t ignoreDepth, int32_t maxDepth) {
     update(ignoreDepth, maxDepth, CURRENT_THREAD);
 }
@@ -71,7 +71,7 @@ void CallStack::dump(const char* prefix) const {
     }
     free_backtrace_symbols(symbols, mCount);
 }
-#endif
+#endif*/
 
 void CallStack::dump(int fd, int indent, const char* prefix) const {
     FdPrinter printer(fd, indent, prefix);
